@@ -5,8 +5,14 @@
       <img src="@/assets/logo.svg" alt="Sentune Logo" title=""/>
     </div>
 
-    <!-- barra de pesquisa -->
-    <div class="search-container">
+    <!-- Conteúdo central: home + pesquisa -->
+    <div class="center-content">
+
+      <div class="home-button">
+        <img src="@/assets/home.svg" alt="home" title="home" />
+      </div>
+
+      <!-- Barra de pesquisa -->
       <div class="search-input-wrapper">
         <img src="@/assets/search.svg" alt="pesquisar" title="pesquisar" />
         <input
@@ -18,95 +24,110 @@
       </div>
     </div>
 
-    <!-- controle do usuário -->
-    <button class="premium-button">Ver planos Premium</button>
-   <div class="notification">
-    <img src="@/assets/notification.svg" alt="notificação" title="notificação" />
-   </div>
+    <!-- Controles do usuário -->
+    <div class="user-controls">
+      <button class="premium-button">Ver planos Premium</button>
+      <div class="notification">
+        <img src="@/assets/notification.svg" alt="notificação" title="notificação" />
+      </div>
+    </div>
   </nav>
 </template>
 
-<script setup>
-// Lógica do componente pode ser adicionada aqui
-</script>
-
 <style scoped>
+
+/* Navbar principal */
 .navbar {
   background-color: #121212;
   color: #b3b3b3;
   height: 76px;
-  padding: 12px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  width: 100vw;
+  width: 100%;
+}
+
+/* Logo */
+.logo {
+  margin-right: 16px;
 }
 
 .logo img {
-    width: 36px;
-    height: 36px;
-    margin-right: 10px;
+  width: 36px;
+  height: 36px;
 }
 
-.logo {
+/* Conteúdo central */
+.center-content {
   display: flex;
   align-items: center;
-  font-size: 24px;
-  color: #b3b3b3;
+  flex: 1; 
+  max-width: 600px; 
+  margin: 0 auto;
 }
 
-.search-container {
-  flex-grow: 1;
+/* Botão home */
+.home-button {
   display: flex;
+  align-items: center;
   justify-content: center;
+  margin-right: 16px;
 }
 
+.home-button img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Barra de pesquisa */
 .search-input-wrapper {
-  position: relative;
-  width: 50%;
   display: flex;
   align-items: center;
-  background-color: #5a5a5a;
+  background-color: #fff;
   border-radius: 500px;
-  padding: 10px;
-}
-
-.search-input {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 20px;
-  outline: none;
+  padding: 8px 12px;
   width: 100%;
-  padding: 0 8px;
 }
 
-.search-input::placeholder {
-  color: #b3b3b3;
-}
-
-/* Estilização para o ícone de busca */
 .search-input-wrapper img {
-  width: 28px;
-  height: 28px;
+  width: 16px;
+  height: 16px;
   margin-right: 8px;
 }
 
-.search-input-wrapper:hover {
-  background-color: #727272;
-  transition: 0.5s;
+.search-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Controles de usuário */
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .premium-button {
-  background-color: #727272;
+  background: transparent;
+  border: 1px solid #b3b3b3;
+  border-radius: 500px;
   color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 700;
   cursor: pointer;
 }
+
+.notification {
+  display: flex;
+}
+
+.notification img {
+  width: 24px;
+  height: 24px;
+}
+
 </style>
