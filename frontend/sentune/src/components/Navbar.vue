@@ -83,15 +83,15 @@
 .search-input-wrapper {
   display: flex;
   align-items: center;
-  background-color: #fff;
+  background-color: rgb(31, 31, 31);
   border-radius: 500px;
   padding: 8px 12px;
   width: 100%;
 }
 
 .search-input-wrapper img {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   margin-right: 8px;
 }
 
@@ -101,6 +101,7 @@
   width: 100%;
   outline: none;
   font-size: 14px;
+  color: white;
 }
 
 /* Controles de usuário */
