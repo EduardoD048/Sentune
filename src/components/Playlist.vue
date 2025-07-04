@@ -5,7 +5,7 @@
     <div class="recommended"><button>recomendada</button></div>
 
     <!-- Componente filho recebendo músicas via prop -->
-    <Musics :musics="playlistMusics" />
+    <Musics :musics="playlist" />
   </div>
 </template>
 
@@ -17,16 +17,11 @@ export default {
   components: {
     Musics,
   },
-  data() {
-    return {
-      playlistMusics: [
-        { id: 1, name: "Bohemian Rhapsody", artist: "Queen", duration: "5:55" },
-        { id: 2, name: "Hotel California", artist: "Eagles", duration: "6:30" },
-        { id: 3, name: "Imagine", artist: "John Lennon", duration: "3:07" },
-        { id: 4, name: "Stairway to Heaven",artist: "Led Zeppelin", duration: "8:02",},
-        { id: 5,name: "Sweet Child O Mine",artist: "Guns N Roses", duration: "5:03",},
-      ],
-    };
+  props: {
+    playlist: {
+      type: Array,
+      default: () => [],
+    },
   },
 };
 </script>
@@ -36,8 +31,9 @@ export default {
   display: flex;
   width: 20%;
   height: 100vh;
-  background-color: rgb(69, 101, 243);
+  background-color: rgb(251, 255, 252);
   flex-direction: column;
+  background-color: #151a57;
 }
 
 .playlist h1 {
@@ -49,16 +45,12 @@ export default {
 }
 
 .playlist button {
-  background-color: #121212;
   color: #b3b3b3;
   border: none;
   padding: 16px;
   border-radius: 500px;
   cursor: pointer;
   margin: 10px;
-}
-
-.playlist button:hover {
-  background-color: #5de7ff;
+  background: transparent;
 }
 </style>

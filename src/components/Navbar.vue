@@ -115,7 +115,7 @@
   background: transparent;
   border: 1px solid #b3b3b3;
   border-radius: 500px;
-  color: white;
+  color: #b3b3b3;
   padding: 8px 16px;
   font-size: 14px;
   font-weight: 700;
